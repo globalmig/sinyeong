@@ -16,7 +16,7 @@ export const CATEGORY: {
     },
     proofing: {
         title: '방수 도료 공사',
-        banner: "/images/business_banner.jpg",
+        banner: "/images/proofing_banner.jpg",
         categories: [
             { name: "폴리우레아 수지 도막 방수", url: "polyurea", },
             { name: "차열 방수", url: "heat_insulation", },

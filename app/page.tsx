@@ -2,7 +2,7 @@
 import MainSlide from "@/components/MainSlide";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 interface SlideHandle {
   next: () => void;
@@ -12,6 +12,8 @@ interface SlideHandle {
 export default function HomePage() {
 
   const slideRef = useRef<SlideHandle>(null);
+
+  const [isHover, setIsHover] = useState<string | null>(null);
 
   return (
     <>
@@ -33,7 +35,7 @@ export default function HomePage() {
           <div className="display-flex-flow">
             <section>
               <div>
-                <Image src="/images/회사소개.jpg" alt="회사소개" width={300} height={300} />
+                <Image src="/images/회사소개.jpg" alt="회사소개" width={373} height={373} />
               </div>
               <div>
                 <h2>회사소개</h2>
@@ -41,7 +43,7 @@ export default function HomePage() {
                 {/* hover: display-block */}
                 <div>
                   <Link href="/about/introduce">
-                  <Image src="/icons/기업개요_자세히보기.jpg" alt="자세히보기" width={70} height={70} />
+                  <Image src="/icons/기업개요_자세히보기.jpg" alt="자세히보기" width={51} height={51} />
                   </Link>
                 </div>
               </div>
@@ -50,7 +52,7 @@ export default function HomePage() {
             </section>
             <section>
               <div>
-                <Image src="/images/사업분야.jpg" alt="사업분야" width={300} height={300} />
+                <Image src="/images/사업분야.jpg" alt="사업분야" width={373} height={373} />
               </div>
               <div>
                 <h2>사업분야</h2>
@@ -58,7 +60,7 @@ export default function HomePage() {
                 {/* hover: display-block */}
                 <div>
                   <Link href="/about/business">
-                  <Image src="/icons/기업개요_자세히보기.jpg" alt="자세히보기" width={70} height={70} />
+                  <Image src="/icons/기업개요_자세히보기.jpg" alt="자세히보기" width={51} height={51} />
                   </Link>
                 </div>
               </div>
@@ -67,7 +69,7 @@ export default function HomePage() {
             </section>
             <section>
               <div>
-                <Image src="/images/포트폴리오.jpg" alt="포트폴리오" width={300} height={300} />
+                <Image src="/images/포트폴리오.jpg" alt="포트폴리오" width={373} height={373} />
               </div>
               <div>
                 <h2>포트폴리오</h2>
@@ -75,7 +77,7 @@ export default function HomePage() {
                 {/* hover: display-block */}
                 <div>
                   <Link href="/gallery">
-                  <Image src="/icons/기업개요_자세히보기.jpg" alt="자세히보기" width={70} height={70} />
+                  <Image src="/icons/기업개요_자세히보기.jpg" alt="자세히보기" width={51} height={51} />
                   </Link>
                 </div>
               </div>

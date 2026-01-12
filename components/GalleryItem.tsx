@@ -15,7 +15,7 @@ export default function GalleryItem({ data }: GalleryItemProps) {
     return (
         <section>
             <div>
-                <Image src={thumbnail} alt={data.name} width={300} height={200} />
+                <Image src={thumbnail} alt={data.name} width={1000} height={600} />
             </div>
             <h3><Link href={`/gallery/${data.id}`}>{data.name}</Link></h3>
         </section>

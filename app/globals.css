@@ -7,7 +7,7 @@
     list-style: none;
     box-sizing: border-box;
     word-break: keep-all;
-    outline: 0px solid silver;
+    outline: 1px solid silver;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -89,11 +89,80 @@ button {
 }
 
 article>div {
-    padding: 80px 5%;
+    padding: 80px 5% 100px;
+}
+
+article>div>:first-child {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+article>div>:first-child h2 {
+    position: relative;
+}
+
+article>div>:first-child p {
+    margin-top: 30px;
+    color: #555;
+}
+
+article>div>:first-child h2::after {
+    content: '';
+    width: 34px;
+    height: 3px;
+    background-color: #2C57AD;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(0%, -50%);
 }
 
 /* header */
 
+
+/* footer */
+
+.contact {
+    background-color: #222;
+    color: white;
+}
+
+.contact>div {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.contact>div p {
+    margin: 10px 0 20px;
+}
+
+.contact>div>div {
+    justify-content: center;
+    gap: 12px;
+}
+
+.contact>div>div a {
+    color: white
+}
+
+footer {
+    background-color: #D3D8DF;
+    color: white;
+}
+
+footer>div {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+footer>div>ul {
+    margin: 20px 0 40px;
+    border-bottom: 1px solid #9AA5B4;
+}
+
+footer>div>p {
+    color: #9AA5B4;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -125,11 +194,27 @@ article>div {
     }
 
     article>div {
-        padding: 150px 0px;
+        padding: 150px 0px 250px;
         width: 1200px;
         margin: 0 auto;
     }
 
     /* header */
+
+    /* footer */
+
+    .contact>div {
+        padding: 50px 0;
+    }
+
+    footer>div {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+
+    footer>div>ul {
+        margin: 20px 0;
+    }
 
 }

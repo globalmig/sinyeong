@@ -1,46 +1,30 @@
 "use client";
 import { PORTFOLIO } from "@/data/portfolio";
 import Image from "next/image";
-import { usePathname } from "next/navigation"
+import { useParams } from "next/navigation"
+import { useRouter } from "next/router";
 
 export default function GalleryDetail() {
 
-    const pathname = usePathname()
-    const pathnameSplit = pathname.split('/').filter(Boolean);
-    const detailId = Number(pathnameSplit[1])
+    const params = useParams();
+    const { id } = params;
+    const detailId = Number(id);
+    const router = useRouter();
 
-    const detail = PORTFOLIO.find(p => p.id === detailId)
+    const detail = PORTFOLIO.find(p => p.id === detailId);
+    const detailIndex = PORTFOLIO.findIndex(p => p.id === detailId)
+
+    const prev = PORTFOLIO[detailIndex - 1];
+    const next = PORTFOLIO[detailIndex + 1];
+
+    const goDetail = (i : number) => {
+        const target = PORTFOLIO[i];
+        router.push(`/gallery/${target.id}`);
+    }
 
     if (!detail) {
         return <div className="loading">갤러리를 불러오는 중입니다...</div>
     }
-
-    /*
-    const pathname = usePathname();
-    const wastePathname = pathname.startsWith("/portfolio/waste");
-    const restorationPathname = pathname.startsWith("/portfolio/restoration");
-    const params = useParams();
-    const { category, id } = params;
-    const detailId = Number(id);
-
-    const validCategories = CATEGORY_MAP.portfolio.categories?.map(c => c.url) ?? [];
-    const categoryValue = Array.isArray(category) ? category[0] : category || "";
-
-    const filterList = validCategories.includes(categoryValue)
-        ? PortfolioData.filter(p => p.url === categoryValue)
-        : [];
-
-    const detailIndex = filterList.findIndex(p => p.id === detailId);
-    const detail = filterList[detailIndex];
-
-    const prev = filterList[detailIndex - 1];
-    const next = filterList[detailIndex + 1];
-
-    const goDetail = (targetIndex: number) => {
-        const target = filterList[targetIndex];
-        router.push(`/portfolio/${category}/${target.id}`);
-    };
-    */
 
     return (
         <>
@@ -54,19 +38,19 @@ export default function GalleryDetail() {
                     </div>
                 )}
             </div>
-            {/* <div>
+            <div>
                 <div>
                     {prev &&
-                        <p onClick={() => goDetail(detailIndex - 1)}><span>이전 사례</span> {prev.name}</p>
+                        <p onClick={() => goDetail(detailIndex - 1)}><span>이전글</span> {prev.name}</p>
                     }
                     {next &&
-                        <p onClick={() => goDetail(detailIndex + 1)}><span>다음 사례</span> {next.name} </p>
+                        <p onClick={() => goDetail(detailIndex + 1)}><span>다음글</span> {next.name} </p>
                     }
                 </div>
-                <button onClick={() => router.push(`/portfolio/${categoryValue}`)}>
+                <button onClick={() => router.push("/gallery")}>
                     목록
                 </button>
-            </div> */}
+            </div>
         </>
     )
 }

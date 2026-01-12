@@ -24,11 +24,11 @@ export default function ServiceLayout() {
                 <h2>{service.name}</h2>
                 <p>{service.eng_name}</p>
             </div>
-            <div>
+            <div className="intro">
                 <div className="display-flex-flow">
                     {service.img.map(i =>
                         <div key={i}>
-                            <Image src={i} alt={service.name} width={300} height={300} />
+                            <Image src={i} alt={service.name} width={1000} height={609} />
                         </div>
                     )}
                 </div>
@@ -42,7 +42,7 @@ export default function ServiceLayout() {
                 </div>
             </div>
             {service.process &&
-                <div>
+                <div className="process">
                     <section>
                         <div>
                             <h3>시공방법</h3>
@@ -63,7 +63,7 @@ export default function ServiceLayout() {
                     </div>
                 </div>
             }
-            <div>
+            <div className="apply">
                 <section>
                         <div>
                             <h3>적용분야</h3>
