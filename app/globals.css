@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    word-break: keep-all;
+    outline: 0px solid silver;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    color: black;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+p,
+li {
+    transition: 0.5s;
+    font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    border: none;
+}
+
+textarea {
+    resize: none;
+}
+
+input {
+    border: 0px;
+    background-color: transparent;
+}
+
+img {
+    display: block;
+    margin: auto 0;
+}
+
+button {
+    border: 0px solid;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.display-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.display-flex-flow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pc,
+.pc-flex {
+    display: none;
+}
+
+.white-bg {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+
+article>div {
+    padding: 80px 5%;
+}
+
+/* header */
+
+
+@media screen and (min-width: 768px) {
+
+    p,
+    li {
+        font-size: 1.1rem;
+    }
+
+}
+
+@media screen and (min-width: 1366px) {
+
+    .pc-flex {
+        display: flex;
+        pointer-events: auto;
+    }
+
+    .pc {
+        display: block;
+    }
+
+    .mo {
+        display: none;
+    }
+
+    li,
+    p {
+        font-size: 1.2rem;
+    }
+
+    article>div {
+        padding: 150px 0px;
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* header */
+
+}

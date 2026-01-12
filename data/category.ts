@@ -11,6 +11,7 @@ export const CATEGORY: {
         categories: [
             { name: "인사말", url: "introduce", },
             { name: "사업분야", url: "business", },
+            { name: "보유 기술 및 특허", url: "technology", },
         ],
     },
     proofing: {
