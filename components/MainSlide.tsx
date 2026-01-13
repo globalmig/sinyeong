@@ -42,13 +42,13 @@ const MainSlide = forwardRef<SlideHandle>((_, ref) => {
 
     return (
         <Slider ref={sliderRef} {...settings} className="main-slider">
-            <div>
+            <div className="main-item">
                 <Image src="/images/banner1.jpg" alt="배너1" width={2560} height={800} priority quality={100} />
             </div>
-            <div>
+            <div className="main-item">
                 <Image src="/images/banner2.jpg" alt="배너2" width={2560} height={800} priority quality={100} />
             </div>
-            <div>
+            <div className="main-item">
                 <Image src="/images/banner3.jpg" alt="배너3" width={2560} height={800} priority quality={100} />
             </div>
         </Slider>

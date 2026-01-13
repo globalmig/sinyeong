@@ -24,6 +24,14 @@ export default function HomePage() {
           <p>신뢰와 품질로 완성하는 현장을 신영E&D와 함께 합니다.</p>
         </div>
         <MainSlide ref={slideRef} />
+        <div className="pc-flex">
+          <button onClick={() => slideRef.current?.prev()}>
+            <Image src="/icons/prev.png" alt="이전" width={35} height={85}/>
+          </button>
+          <button onClick={() => slideRef.current?.next()}>
+            <Image src="/icons/next.png" alt="다음" width={35} height={85}/>
+          </button>
+        </div>
       </main>
 
       <article className="home">

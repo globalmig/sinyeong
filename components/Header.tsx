@@ -16,6 +16,7 @@ export default function Header() {
     const [isScroll, setIsScroll] = useState<boolean>(false);
 
     return (
+        <>
         <header>
             <div className="display-flex">
                 <h2>
@@ -56,5 +57,7 @@ export default function Header() {
                 </div>
             </div>
         </header>
+        <div className="black-bg"></div>
+        </>
     )
 }
