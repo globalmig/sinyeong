@@ -15,10 +15,10 @@ export default function TechnologyPage() {
                     {TECHNOLOGY.map(t =>
                         <section key={t.id} className="display-flex-flow">
                             <div>
-                                <Image src={`/images//service/보유기술_${t.uniqueNumber}.jpg`} alt={t.name} width={500} height={333} />
+                                <Image src={`/images/service/보유기술_${t.uniqueNumber}.jpg`} alt={t.name} width={500} height={333} />
                             </div>
                             <div>
-                                <h3>{t.name}</h3>
+                                <h4>{t.name}</h4>
                                 <ul>
                                     <li>
                                         <p>모델명</p>

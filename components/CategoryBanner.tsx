@@ -10,7 +10,9 @@ export default function CategoryBanner() {
     const pathnameSplit = pathname.split('/').filter(Boolean);
 
     const mainCategory = pathnameSplit[0];
+    const subCategory = pathnameSplit[1];
     const category = CATEGORY[mainCategory];
+    const categoryTitle = subCategory ? CATEGORY[mainCategory].categories?.find(c => c.url === subCategory)?.name : category.title;
 
     return (
         <main className="sub-banner">
@@ -18,7 +20,7 @@ export default function CategoryBanner() {
                 <div>
                     <Image src={category.banner} alt={category.title} width={2560} height={600}/>
                 </div>
-                <h1>{category.title}</h1>
+                <h1>{categoryTitle}</h1>
             </div>
         </main>
     )

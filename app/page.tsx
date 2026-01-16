@@ -12,7 +12,6 @@ interface SlideHandle {
 export default function HomePage() {
 
   const slideRef = useRef<SlideHandle>(null);
-
   const [isHover, setIsHover] = useState<string | null>(null);
 
   return (
@@ -20,7 +19,7 @@ export default function HomePage() {
 
       <main className="main-banner">
         <div>
-          <h1>품질·정직·책임·상생</h1>
+          <h2>품질·정직·책임·상생</h2>
           <p>신뢰와 품질로 완성하는 현장을 신영E&D와 함께 합니다.</p>
         </div>
         <MainSlide ref={slideRef} />
@@ -41,56 +40,50 @@ export default function HomePage() {
             <p>신영E&D는 방수 도료, 건축 내외장재, 도로 포장, 교통안전 분야의 자재 공급 및 시공 솔루션을 제공하는 전문 기업입니다.</p>
           </div>
           <div className="display-flex-flow">
-            <section>
+            <section onMouseEnter={() => setIsHover("회사소개")} onMouseLeave={()=> setIsHover(null)}>
               <div>
                 <Image src="/images/회사소개.jpg" alt="회사소개" width={373} height={373} />
               </div>
               <div>
                 <h2>회사소개</h2>
                 <p>ABOUT US</p>
-                {/* hover: display-block */}
-                <div>
+                <div className= {isHover === "회사소개" ? "hover" : ""}>
                   <Link href="/about/introduce">
-                  <Image src="/icons/기업개요_자세히보기.jpg" alt="자세히보기" width={51} height={51} />
+                  <Image src="/icons/기업개요_자세히보기.png" alt="자세히보기" width={51} height={51} />
                   </Link>
                 </div>
               </div>
-              {/* hover: 파란배경 */}
-              <div></div>
+              <div className= {isHover === "회사소개" ? "hover" : ""}></div>
             </section>
-            <section>
+            <section onMouseEnter={() => setIsHover("사업분야")} onMouseLeave={()=> setIsHover(null)}>
               <div>
                 <Image src="/images/사업분야.jpg" alt="사업분야" width={373} height={373} />
               </div>
               <div>
                 <h2>사업분야</h2>
                 <p>BUSINESS</p>
-                {/* hover: display-block */}
-                <div>
+                <div className= {isHover === "사업분야" ? "hover" : ""}>
                   <Link href="/about/business">
-                  <Image src="/icons/기업개요_자세히보기.jpg" alt="자세히보기" width={51} height={51} />
+                  <Image src="/icons/기업개요_자세히보기.png" alt="자세히보기" width={51} height={51} />
                   </Link>
                 </div>
               </div>
-              {/* hover: 파란배경 */}
-              <div></div>
+              <div className= {isHover === "사업분야" ? "hover" : ""}></div>
             </section>
-            <section>
+            <section onMouseEnter={() => setIsHover("포트폴리오")} onMouseLeave={()=> setIsHover(null)}>
               <div>
                 <Image src="/images/포트폴리오.jpg" alt="포트폴리오" width={373} height={373} />
               </div>
               <div>
                 <h2>포트폴리오</h2>
                 <p>PORTFOLIO</p>
-                {/* hover: display-block */}
-                <div>
+                <div className= {isHover === "포트폴리오" ? "hover" : ""}>
                   <Link href="/gallery">
-                  <Image src="/icons/기업개요_자세히보기.jpg" alt="자세히보기" width={51} height={51} />
+                  <Image src="/icons/기업개요_자세히보기.png" alt="자세히보기" width={51} height={51} />
                   </Link>
                 </div>
               </div>
-              {/* hover: 파란배경 */}
-              <div></div>
+              <div className= {isHover === "포트폴리오" ? "hover" : ""}></div>
             </section>
           </div>
         </div>

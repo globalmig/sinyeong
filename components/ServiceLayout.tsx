@@ -32,12 +32,16 @@ export default function ServiceLayout() {
                         </div>
                     )}
                 </div>
-                <div className="display-flex-flow">
+                <div>
                     <div>
                         <h3>{service.name}</h3>
                     </div>
                     <div>
-                        <p>{service.contents}</p>
+                        <p
+                            dangerouslySetInnerHTML={{
+                                __html: service.contents,
+                            }}
+                        />
                     </div>
                 </div>
             </div>
@@ -52,30 +56,34 @@ export default function ServiceLayout() {
                         {service.process.map((p, index) =>
                             <section key={p.kr}>
                                 <div>
-                                    <h3>0{index}</h3>
+                                    <h3>0{index + 1}</h3>
                                     <h4>{p.kr}</h4>
                                     <p>{p.en}</p>
                                 </div>
                             </section>
                         )}
-                        {/* 점선 */}
-                        <div></div>
+                        <div>
+                            <Image className="mo" src="/images/dotsmo.png" alt="dots" width={8} height={472}/>
+                            <Image className="pc" src="/images/dotsp.png" alt="dots" width={734} height={8}/>
+                        </div>
                     </div>
                 </div>
             }
             <div className="apply">
                 <section>
-                        <div>
-                            <h3>적용분야</h3>
-                        </div>
-                    </section>
-                    <ul>
-                        {service.apply.map((a, index)=>
-                        <li key={index}>
-                            {a}
-                        </li>
-                        )}
-                    </ul>
+                    <div>
+                        <h3>적용분야</h3>
+                    </div>
+                </section>
+                <ul>
+                    {service.apply.map((a, index) =>
+                        <li key={index}
+                            dangerouslySetInnerHTML={{
+                                __html: a,
+                            }}
+                        />
+                    )}
+                </ul>
             </div>
         </>
     )

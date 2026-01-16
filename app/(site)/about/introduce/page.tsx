@@ -14,7 +14,7 @@ export default function IntroducePage() {
                     <section>
                         <div>
                             <div>
-                                <Image src="icons/신뢰와품질.png" alt="신뢰와 품질" width={47} height={62}/>
+                                <Image src="/icons/신뢰와품질.png" alt="신뢰와 품질" width={47} height={62}/>
                             </div>
                             <h4>신뢰와 품질</h4>
                         </div>
@@ -22,7 +22,7 @@ export default function IntroducePage() {
                     <section>
                         <div>
                             <div>
-                                <Image src="icons/안전최우선.png" alt="안전 최우선" width={76} height={76}/>
+                                <Image src="/icons/안전최우선.png" alt="안전 최우선" width={76} height={76}/>
                             </div>
                             <h4>안전 최우선</h4>
                         </div>
@@ -30,7 +30,7 @@ export default function IntroducePage() {
                     <section>
                         <div>
                             <div>
-                                <Image src="icons/성실과책임.png" alt="성실과 책임" width={59} height={60}/>
+                                <Image src="/icons/성실과책임.png" alt="성실과 책임" width={59} height={60}/>
                             </div>
                             <h4>성실과 책임</h4>
                         </div>

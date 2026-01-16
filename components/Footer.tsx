@@ -10,7 +10,7 @@ export default function Footer() {
                     <p>안전하고 완성도 높은 시공을 제공합니다.</p>
                     <div className="display-flex">
                         <Image src="/icons/tel.png" alt="대표전화 아이콘" width={100} height={100} />
-                        <h1><Link href="tel:010-8688-2486">010-8688-2486</Link></h1>
+                        <h3><Link href="tel:010-8688-2486">010-8688-2486</Link></h3>
                     </div>
                 </div>
             </div>
