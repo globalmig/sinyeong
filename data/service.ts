@@ -28,7 +28,7 @@ export const SERVICE = [
         category: 'proofing',
         subCategory: 'heat_insulation',
         name: "차열 방수",
-        eng_name: "POLYUREA",
+        eng_name: "HEAT SHIELDING",
         img: [
             "/images/service/차열방수1.jpg",
             "/images/service/차열방수2.jpg",
@@ -52,7 +52,7 @@ export const SERVICE = [
         category: 'proofing',
         subCategory: 'bridge_surface',
         name: "교면 방수",
-        eng_name: "POLYUREA",
+        eng_name: "BRIDGE DECK",
         img: [
             "/images/service/교면방수1.jpg",
             "/images/service/교면방수2.jpg",
@@ -76,7 +76,7 @@ export const SERVICE = [
         category: 'ceiling',
         subCategory: 'metal',
         name: "금속 천장재",
-        eng_name: "POLYUREA",
+        eng_name: "METAL CEILING",
         img: [
             "/images/service/금속천장재1.jpg",
             "/images/service/금속천장재2.jpg",
@@ -100,7 +100,7 @@ export const SERVICE = [
         category: 'ceiling',
         subCategory: 'acoustic_metal',
         name: "금속 흡음 천장재",
-        eng_name: "POLYUREA",
+        eng_name: "METAL CEILING",
         img: [
             "/images/service/금속흡음천장재1.jpg",
             "/images/service/금속흡음천장재2.jpg",
@@ -124,7 +124,7 @@ export const SERVICE = [
         category: 'pavement',
         subCategory: 'layer',
         name: "박층 포장",
-        eng_name: "POLYUREA",
+        eng_name: "ROAD PAVEMENT",
         img: [
             "/images/service/박층포장1.jpg",
             "/images/service/박층포장2.jpg",
@@ -148,7 +148,7 @@ export const SERVICE = [
         category: 'traffic',
         subCategory: 'luminous',
         name: "발광형 교통 안내 표지판",
-        eng_name: "POLYUREA",
+        eng_name: "TRAFFIC",
         img: [
             "/images/service/발광형안내표지판1.jpg",
             "/images/service/발광형안내표지판2.jpg",
@@ -166,7 +166,7 @@ export const SERVICE = [
         category: 'traffic',
         subCategory: 'luminous',
         name: "발광형 이동 안전 수진",
-        eng_name: "POLYUREA",
+        eng_name: "TRAFFIC",
         img: [
             "/images/service/발광형이동안전1.jpg",
             "/images/service/발광형이동안전2.jpg",
@@ -184,7 +184,7 @@ export const SERVICE = [
         category: 'traffic',
         subCategory: 'guidance_signs',
         name: "5대 주정차 금지 안내 표지판",
-        eng_name: "POLYUREA",
+        eng_name: "TRAFFIC",
         img: [
             "/images/service/도로안내표지판1.jpg",
             "/images/service/도로안내표지판2.jpg",
@@ -201,7 +201,7 @@ export const SERVICE = [
         category: 'traffic',
         subCategory: 'guidance_signs',
         name: "회전교차로 방향 안내 표지판",
-        eng_name: "POLYUREA",
+        eng_name: "TRAFFIC",
         img: [
             "/images/service/도로안내표지판4.jpg",
             "/images/service/도로안내표지판5.jpg",

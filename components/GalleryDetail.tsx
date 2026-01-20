@@ -1,8 +1,7 @@
 "use client";
 import { PORTFOLIO } from "@/data/portfolio";
 import Image from "next/image";
-import { useParams } from "next/navigation"
-import { useRouter } from "next/router";
+import { useParams, useRouter } from "next/navigation"
 
 export default function GalleryDetail() {
 
@@ -32,8 +31,8 @@ export default function GalleryDetail() {
                 <h2>{detail.name}</h2>
             </div>
             <div>
-                {detail.img.map(d =>
-                    <div key={detail.id}>
+                {detail.img.map((d, index) =>
+                    <div key={index}>
                         <Image src={d} alt={detail.name} width={1200} height={609} />
                     </div>
                 )}

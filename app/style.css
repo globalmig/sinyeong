@@ -377,6 +377,10 @@ main {
     transform: translate(-50%, 0%);
 }
 
+.gallery-detail>div>:nth-child(2) {
+    margin-bottom: 70px;
+}
+
 .gallery-detail>div>:nth-child(2)>div img {
     width: 100%;
     height: auto;
@@ -394,6 +398,7 @@ main {
 .gallery-detail>div>:last-child>div>p {
     padding: 10px 0;
     color: #555;
+    cursor: pointer;
 }
 
 .gallery-detail>div>:last-child>div>p:first-of-type {
@@ -410,6 +415,8 @@ main {
     margin-top: 40px;
     background-color: #2C57AD;
     color: white;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -539,14 +546,6 @@ main {
 @media screen and (min-width: 1366px) {
 
     /* main */
-    .main-banner>:last-child {
-        width: 1200px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        justify-content: space-between;
-    }
 
     .main-banner>:first-child h2 {
         font-size: 3rem;
@@ -558,6 +557,20 @@ main {
 
     .main-slider .slick-dots>li>button::before {
         width: 70px;
+    }
+
+    .main-banner>:last-child {
+        width: 1200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: space-between;
+        z-index: 2;
+    }
+
+    .main-banner>:last-child button img{
+        cursor: pointer;
     }
 
     /* home */
@@ -673,6 +686,23 @@ main {
     .gallery>div>div>section h4::after {
         width: 30px;
         bottom: -15px;
+    }
+
+    .gallery-detail>div>:nth-child(2) {
+        width: 800px;
+        margin: 0 auto 100px;
+    }
+
+    .gallery-detail>div>:nth-child(2)>div {
+        margin: 40px 0;
+    }
+
+    .gallery-detail>div>:last-child>div>p {
+        padding: 20px 0;
+    }
+
+    .gallery-detail>div>:last-child>button {
+        padding: 10px 30px;
     }
 
 }

@@ -205,6 +205,10 @@ nav>ul>li p.sub-open {
     color: white;
 }
 
+nav>ul>li p a {
+    color: white;
+}
+
 nav>ul>li p.sub-open a {
     color: white;
 }
