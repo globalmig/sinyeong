@@ -150,7 +150,7 @@ header>div {
 
 header.header-scroll {
     background-color: white;
-    border-bottom: #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 header>div>h2 a {
@@ -161,8 +161,13 @@ header.header-scroll>div>h2 a {
     color: black;
 }
 
+header.header-scroll>div>:last-child {
+    filter:invert(1);
+}
+
 header>div>:last-child {
     cursor: pointer;
+    margin: auto 0;
 }
 
 nav {
