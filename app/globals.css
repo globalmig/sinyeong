@@ -211,7 +211,7 @@ nav>ul>li p.sub-open {
 }
 
 nav>ul>li p a {
-    color: white;
+    color: black;
 }
 
 nav>ul>li p.sub-open a {
@@ -396,7 +396,8 @@ footer>div>p {
         justify-content: right;
     }
 
-    header.header-scroll>div>nav>ul li p {
+    header.header-scroll>div>nav>ul li p,
+    header.header-scroll>div>nav>ul li p a{
         color: black;
     }
 
@@ -406,6 +407,7 @@ footer>div>p {
 
     nav>ul>li {
         position: relative;
+        color: black;
     }
 
     nav>ul>li p {

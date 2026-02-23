@@ -42,7 +42,7 @@ export default function Header() {
                                     <li key={key} className={isOpenSub ? "sub-open" : ""}>
                                         {c.categories ?
                                         <p onMouseEnter={()=> setIsOpenSub(key)} className={isOpenSub === key ? "sub-open": ""}>{c.title}</p> :
-                                        <p onClick={()=> setIsOpen(false)} onMouseLeave={()=> setIsOpenSub(null)} className={isOpenSub === key ? "sub-open": ""}><Link href={`/${key}`}>{c.title}</Link></p>
+                                        <p onClick={()=> setIsOpen(false)} onMouseLeave={()=> setIsOpenSub(null)}><Link href={`/${key}`}>{c.title}</Link></p>
                                     }
                                         {c.categories && (
                                             <ul className={isOpenSub === key ? "sub-open" : ""} onMouseLeave={()=> setIsOpenSub(null)}>
