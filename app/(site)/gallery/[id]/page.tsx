@@ -2,7 +2,7 @@ import GalleryDetail from "@/components/GalleryDetail";
 
 export default function GalleryDetailPage() {
     return (
-        <article className="gallery-detail">
+        <article>
             <div>
                 <GalleryDetail/>
             </div>

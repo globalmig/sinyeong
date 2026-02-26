@@ -3,7 +3,7 @@ import GalleryItem from "./GalleryItem";
 
 export default function GalleryList() {
     return (
-        <div className="display-flex-flow">
+        <div className="flex-between-wrap">
             {PORTFOLIO.map(p=> 
                 <GalleryItem data={p} key={p.id}/>
             )}

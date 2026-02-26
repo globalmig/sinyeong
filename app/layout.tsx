@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import "./style.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import "./globals.css";
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: '신영이앤디',

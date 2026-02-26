@@ -1,4 +1,4 @@
-import CategoryBanner from "@/components/CategoryBanner";
+import CategoryBanner from "@/components/common/CategoryBanner";
 
 export default function SiteLayout({
     children,

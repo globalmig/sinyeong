@@ -30,23 +30,35 @@ export default function GalleryDetail() {
             <div>
                 <h2>{detail.name}</h2>
             </div>
-            <div>
+            <div className="mb-17.5 w-full max-w-200 mt-0 mx-auto pc:mb-25">
                 {detail.img.map((d, index) =>
-                    <div key={index}>
-                        <Image src={d} alt={detail.name} width={1200} height={609} />
+                    <div key={index} className="my-5 pc:my-10">
+                        <Image className="w-full h-auto" src={d} alt={detail.name} width={1200} height={609} />
                     </div>
                 )}
             </div>
             <div>
-                <div>
+                <div className="border-t border-t-[#ccc]">
                     {prev &&
-                        <p onClick={() => goDetail(detailIndex - 1)}><span>이전글</span> {prev.name}</p>
+                        <p
+                        className="py-2.5 cursor-pointer text-[#555] border-b border-b-[#ccc] pc:py-5"
+                        onClick={() => goDetail(detailIndex - 1)}>
+                            <span className="font-bold text-blue-dark mr-5">이전글</span>
+                             {prev.name}
+                            </p>
                     }
                     {next &&
-                        <p onClick={() => goDetail(detailIndex + 1)}><span>다음글</span> {next.name} </p>
+                        <p
+                        className="py-2.5 cursor-pointer text-[#555] border-b border-b-[#ccc] pc:py-5"
+                        onClick={() => goDetail(detailIndex + 1)}>
+                            <span className="font-bold text-blue-dark mr-5">다음글</span>
+                             {next.name}
+                            </p>
                     }
                 </div>
-                <button onClick={() => router.push("/gallery")}>
+                <button
+                className="mt-10 bg-blue-dark text-white py-1.25 px-2.5 pc:py-2.5 pc:px-7.5"
+                onClick={() => router.push("/gallery")}>
                     목록
                 </button>
             </div>

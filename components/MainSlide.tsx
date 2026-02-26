@@ -41,15 +41,15 @@ const MainSlide = forwardRef<SlideHandle>((_, ref) => {
     };
 
     return (
-        <Slider ref={sliderRef} {...settings} className="main-slider">
-            <div className="main-item">
-                <Image src="/images/banner1.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
+        <Slider ref={sliderRef} {...settings} className="main-slider block relative">
+            <div>
+                <Image className="w-full h-125 max-h-175 object-cover" src="/images/banner1.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
             </div>
-            <div className="main-item">
-                <Image src="/images/banner2.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
+            <div>
+                <Image className="w-full h-125 max-h-175 object-cover" src="/images/banner2.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
             </div>
-            <div className="main-item">
-                <Image src="/images/banner3.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
+            <div>
+                <Image className="w-full h-125 max-h-175 object-cover" src="/images/banner3.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
             </div>
         </Slider>
     )

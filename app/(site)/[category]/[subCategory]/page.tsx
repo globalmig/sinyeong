@@ -2,7 +2,7 @@ import ServiceLayout from "@/components/ServiceLayout";
 
 export default function ServicePage () {
     return (
-        <article className="service">
+        <article>
             <div>
                 <ServiceLayout/>
             </div>
