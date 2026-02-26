@@ -67,7 +67,7 @@ export default function Header() {
                                                 ${isTarget ? "max-h-60 opacity-100 translate-y-0 visible" : "max-h-0 opacity-0 -translate-y-2 invisible"}`}>
                                                 {c.categories.map((sub) => (
                                                     <li key={sub.url} 
-                                                        className="hover:bg-blue-light transition-colors border-b border-white/50 last:border-0"
+                                                        className="hover:bg-blue-light pc:hover:bg-blue-medium transition-colors border-b border-white/50 last:border-0"
                                                         onClick={() => setIsOpen(false)}>
                                                         <Link href={`/${key}/${sub.url}`} 
                                                               className="block py-3.75 px-4 text-black pc:text-white">
