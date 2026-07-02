@@ -2,7 +2,7 @@
 import HomeSection from "@/components/section/HomeSection";
 import MainSlide from "@/components/MainSlide";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef} from "react";
 
 interface SlideHandle {
   next: () => void;
@@ -18,8 +18,8 @@ export default function HomePage() {
 
       <main className="relative">
         <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-2 text-white text-center w-[90%]">
-          <h2 className="mb-3.75 md:text-[2.2rem] pc:text-[3rem]">품질·정직·책임·상생</h2>
-          <p>신뢰와 품질로 완성하는 현장을 신영이앤디와 함께 합니다.</p>
+          <h2 className="text-[2rem] mb-3.75 pc:text-[3.5rem]">품질·정직·책임·상생</h2>
+          <p className="text-[1.2rem] pc:text-[1.3rem]">신뢰와 품질로 완성하는 현장을 신영이앤디와 함께 합니다.</p>
         </div>
         <MainSlide ref={slideRef} />
         <div className="hidden pc:flex pc:w-300 pc:absolute pc:top-1/2 pc:left-1/2 pc:-translate-y-1/2 pc:-translate-x-1/2 pc:justify-between pc:z-2">

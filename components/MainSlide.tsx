@@ -14,9 +14,9 @@ const MainSlide = forwardRef<SlideHandle>((_, ref) => {
     const sliderRef = useRef<Slider>(null);
 
     useImperativeHandle(ref, () => ({
-            next: () => sliderRef.current?.slickNext(),
-            prev: () => sliderRef.current?.slickPrev(),
-        
+        next: () => sliderRef.current?.slickNext(),
+        prev: () => sliderRef.current?.slickPrev(),
+
     }));
 
     const settings = {
@@ -43,13 +43,13 @@ const MainSlide = forwardRef<SlideHandle>((_, ref) => {
     return (
         <Slider ref={sliderRef} {...settings} className="main-slider block relative">
             <div>
-                <Image className="w-full h-125 max-h-175 object-cover" src="/images/banner1.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
+                <Image className="w-full h-175 pc:h-220 object-cover" src="/images/banner1.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
             </div>
             <div>
-                <Image className="w-full h-125 max-h-175 object-cover" src="/images/banner2.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
+                <Image className="w-full h-175 pc:h-220 object-cover" src="/images/banner2.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
             </div>
             <div>
-                <Image className="w-full h-125 max-h-175 object-cover" src="/images/banner3.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
+                <Image className="w-full h-175 pc:h-220 object-cover" src="/images/banner3.jpg" alt="방수 도료 공사 전문 신영이앤디" width={2560} height={800} priority quality={100} />
             </div>
         </Slider>
     )

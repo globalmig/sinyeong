@@ -12,7 +12,7 @@ export default function TechnologyPage() {
                 </div>
 
                 <div className="flex-between-wrap">
-                    {TECHNOLOGY.map((t, idx) =>
+                    {TECHNOLOGY.map((t) =>
                         <section key={t.id} className="flex-between-wrap mb-10 md:mb-15 md:w-full pc:mb-20">
                             <div className="md:w-[40%]">
                                 <Image className="w-full h-auto" src={`/images/service/보유기술_${t.uniqueNumber}.jpg`} alt={t.name} width={500} height={333} />

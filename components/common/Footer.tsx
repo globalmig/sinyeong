@@ -18,7 +18,10 @@ export default function Footer() {
                     <div className="flex-between justify-center gap-3">
                             <Image className="w-10 h-auto pc:w-15" src="/icons/tel.png" alt="대표전화 아이콘" width={100} height={100} />
                         <h3 className="my-auto mx-0 text-[1.5rem]">
-                            <Link href="tel:010-8688-2486" className="text-white pc:text-[2.3rem]/[2.3rem] line-height">010-8688-2486</Link>
+                            <Link href="tel:010-8688-2486" 
+                            className="text-white pc:text-[2.3rem]/[2.3rem] line-height">
+                                010-8688-2486
+                                </Link>
                         </h3>
                     </div>
                 </div>
