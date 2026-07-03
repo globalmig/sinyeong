@@ -50,12 +50,13 @@ export default function ServiceLayout() {
                     <div className="relative md:flex md:justify-center flex-wrap">
                         {service.process.map((p, index) =>
                             <section key={p.kr}
-                                className="relative rounded-[100%] bg-white border border-[#377AD0]
-                                        w-45.5 h-45.5 my-10 mx-auto md:w-57.5 md:h-57.5 md:m-5 pc:w-55 pc:h-55 pc:my-0 pc:mx-10">
+                                className="group relative rounded-[100%] bg-white border border-[#377AD0] transition-colors
+                                        w-45.5 h-45.5 my-10 mx-auto md:w-57.5 md:h-57.5 md:m-5
+                                        pc:w-55 pc:h-55 pc:my-0 pc:mx-10 hover:bg-[#377AD0]">
                                 <div className="absolute w-full top-[48%] left-1/2 -translate-y-1/2 -translate-x-1/2 text-center">
-                                    <h3 className="text-blue-dark">0{index + 1}</h3>
-                                    <h4 className="mt-0.5 mb-1.25 md:text-[1.2rem]">{p.kr}</h4>
-                                    <p className="text-[#aaa] pc:text-[0.9rem]">{p.en}</p>
+                                    <h3 className="text-blue-dark group-hover:text-white">0{index + 1}</h3>
+                                    <h4 className="mt-0.5 mb-1.25 md:text-[1.2rem] group-hover:text-white">{p.kr}</h4>
+                                    <p className="text-[#aaa] pc:text-[0.9rem] group-hover:text-white">{p.en}</p>
                                 </div>
                             </section>
                         )}

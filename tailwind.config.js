@@ -14,7 +14,7 @@ module.exports = {
         'blue-medium': '#3F6CC7',
         'blue-light': '#EEF3F9'
       },
-    },
+    },ㄹ
   },
   plugins: [],
 }

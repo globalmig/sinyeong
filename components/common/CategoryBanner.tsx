@@ -18,19 +18,31 @@ export default function CategoryBanner() {
     return (
         <main className="relative">
             <div>
-                <div className="bg-fixed">
-                    <Image className="bg-fixed w-full h-62.5 pc:h-112.5 object-cover" src={category.banner} alt={category.title} width={2560} height={600}/>
+                <div>
+                    <Image src={category.banner} className="w-full h-62.5 pc:h-112.5 bg-center bg-cover" alt={category.title} width={2560} height={600} />
                 </div>
-                <div className="absolute top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2 text-white text-center w-[90%]">
+                <div className="absolute top-[56%] left-1/2 -translate-y-1/2 -translate-x-1/2 text-white text-center w-[90%]">
                     <h2 className="pc:text-[2.5rem]">{categoryTitle}</h2>
                     <div className="mt-5 flex items-center justify-center gap-2 pc:gap-4 text-sm">
-                        <p className="pc:text-[1.2rem]">홈</p>
-                        <div>{'>'}</div>
+                        <div>
+                            <Image src="/icons/home.png"
+                                className="w-8 h-auto"
+                                alt="홈 아이콘" width={54} height={54} />
+                        </div>
+                        <div>
+                            <Image src="/icons/arrow.png"
+                                className="w-2 h-auto"
+                                alt="화살표 아이콘" width={11} height={21} />
+                        </div>
                         <p className="pc:text-[1.2rem]">{category.title}</p>
                         {subCategoryName && (
                             <>
-                                <div>{'>'}</div>
-                                <p className="pc:text-[1.2rem]">{subCategoryName}</p>
+                                <div className="hidden pc:block">
+                                    <Image src="/icons/arrow.png"
+                                        className="w-2 h-auto"
+                                        alt="화살표 아이콘" width={11} height={21} />
+                                </div>
+                                <p className="hidden pc:block pc:text-[1.2rem]">{subCategoryName}</p>
                             </>
                         )}
                     </div>

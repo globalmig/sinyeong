@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const INTRODUCE_INFO = [
-    { name: "신뢰와 품질", icon: "/icons/신뢰와품질.png" },
-    { name: "안전 최우선", icon: "/icons/안전최우선.png" },
-    { name: "성실과 책임", icon: "/icons/성실과책임.png" },
+    { name: "신뢰와 품질", icon: "/icons/신뢰와품질.png", stroke: "#23468A" },
+    { name: "안전 최우선", icon: "/icons/안전최우선.png", stroke: "#6c95cf" },
+    { name: "성실과 책임", icon: "/icons/성실과책임.png", stroke: "#90abcc" },
 ]
 
 export default function IntroducePage() {
@@ -19,9 +19,23 @@ export default function IntroducePage() {
                 <div className="flex-between-wrap pc:justify-center pc:gap-15.25">
                     {INTRODUCE_INFO.map((info, idx) => (
                         <section key={idx}
-                        className="relative w-45 h-45 my-2.5 mx-auto rounded-[100%]
+                        className="group relative w-45 h-45 my-2.5 mx-auto rounded-[100%]
                              pc:w-68 pc:h-68 pc:m-0
                         bg-blue-dark nth-[2]:bg-[#81A4D3] last-of-type:bg-[#A6BAD4]">
+                            <svg
+                                className="pointer-events-none absolute inset-0 w-full h-full -rotate-90"
+                                viewBox="0 0 100 100"
+                            >
+                                <circle
+                                    cx="50" cy="50" r="48"
+                                    fill="none"
+                                    stroke={info.stroke}
+                                    strokeWidth="4"
+                                    strokeDasharray={302}
+                                    strokeDashoffset={302}
+                                    className="transition-[stroke-dashoffset] duration-1200 ease-in-out group-hover:[stroke-dashoffset:0]"
+                                />
+                            </svg>
                             <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
                                 <div>
                                     <Image className="w-auto h-8.5 my-0 mx-auto md:h-10 pc:h-12.5" src={info.icon} alt={info.name} width={47} height={62} />

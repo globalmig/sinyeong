@@ -32,11 +32,11 @@ export default function GalleryDetail() {
                 <h2>{detail.name}</h2>
             </div>
             <div className="mb-17.5 w-full max-w-200 mt-0 mx-auto pc:mb-25">
-                {detail.img.map((d, index) =>
+                {/* {detail.img.map((d, index) =>
                     <div key={index} className="my-5 pc:my-10">
                         <Image className="w-full h-auto" src={d} alt={detail.name} width={1200} height={609} />
                     </div>
-                )}
+                )} */}
             </div>
             <div>
                 <GalleryNavigator prevItem={prevItem} nextItem={nextItem} />

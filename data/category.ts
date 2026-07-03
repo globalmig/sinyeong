@@ -7,7 +7,7 @@ export const CATEGORY: {
 } = {
     about: {
         title: '회사소개',
-        banner: "/images/about_banner.jpg",
+        banner: "/images/about_banner.png",
         categories: [
             { name: "인사말", url: "introduce", },
             { name: "사업분야", url: "business", },
@@ -16,7 +16,7 @@ export const CATEGORY: {
     },
     proofing: {
         title: '방수 도료 공사',
-        banner: "/images/proofing_banner.jpg",
+        banner: "/images/proofing_banner.png",
         categories: [
             { name: "폴리우레아 수지 도막 방수", url: "polyurea", },
             { name: "차열 방수", url: "heat_insulation", },
@@ -25,7 +25,7 @@ export const CATEGORY: {
     },
     ceiling: {
         title: '건축 내외장재',
-        banner: "/images/ceiling_banner.jpg",
+        banner: "/images/ceiling_banner.png",
         categories: [
             { name: "금속 천장재", url: "metal", },
             { name: "금속 흡음 천장재", url: "acoustic_metal", },
@@ -33,14 +33,14 @@ export const CATEGORY: {
     },
     pavement: {
         title: '도로 포장',
-        banner: "/images/pavement_banner.jpg",
+        banner: "/images/pavement_banner.png",
         categories: [
             { name: "박층 포장", url: "layer", },
         ],
     },
     traffic: {
         title: '교통 안전',
-        banner: "/images/traffic_banner.jpg",
+        banner: "/images/traffic_banner.png",
         categories: [
             { name: "발광형 교통 안전 시설물", url: "luminous", },
             { name: "도로 안내 표지판", url: "guidance_signs", },
@@ -48,6 +48,6 @@ export const CATEGORY: {
     },
     gallery: {
         title: '갤러리',
-        banner: "/images/gallery_banner.jpg",
+        banner: "/images/gallery_banner.png",
     },
 };

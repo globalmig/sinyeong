@@ -25,7 +25,7 @@ export default function Header() {
                 <div className="flex justify-between items-center py-3.25 px-[5%] w-full max-w-300 m-auto pc:py-0 pc:px-0 pc:border-b-0">
                     <h2>
                         <Link href="/" className={`text-[1.2rem] pc:text-[1.5rem] font-bold ${isScroll ? "text-black" : "text-white"}`}>
-                            신영이앤디
+                            <Image src="/icons/logo.png" className={`${isScroll ? "brightness-0" : "brightness-100"}`} alt="신영이앤디" width={120} height={19}/>
                         </Link>
                     </h2>
 
@@ -54,9 +54,10 @@ export default function Header() {
                                             ${!isTarget && (isScroll ? "pc:text-black" : "pc:text-white")}`}>
                                             
                                             {c.categories && !isGallery ? (
-                                                <p>{c.title}</p>
+                                                <p className="font-bold">{c.title}</p>
                                             ) : (
-                                                <Link href={`/${key}`} onClick={() => setIsOpen(false)} className="block pc:text-[17.6px] pc:text-white pc:hover:font-bold">
+                                                <Link href={`/${key}`} onClick={() => setIsOpen(false)}
+                                                    className={`font-bold block pc:text-[17.6px] pc:hover:font-bold ${isScroll ? "pc:text-black" : "pc:text-white"}`}>
                                                     {c.title}
                                                 </Link>
                                             )}
